@@ -1,0 +1,162 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 5%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 5%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 70% 35%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 72% 51%;
+    --radius: 0.25rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 5%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 5%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 70% 35%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 72% 51%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+/* Minimal black styles */
+.beta-badge {
+  @apply ml-2 bg-secondary text-foreground text-xs px-2 py-1 rounded-md font-medium border border-border;
+}
+
+/* Hero section gradient */
+.hero-gradient {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* Calendar day styles */
+.calendar-day {
+  @apply min-h-[100px] p-1 border-b border-border border-r relative;
+}
+
+.calendar-day-gray {
+  @apply bg-slate-900;
+}
+
+.calendar-day-current {
+  @apply bg-slate-800;
+}
+
+.calendar-day {
+  @apply min-h-[60px] p-2 relative;
+}
+
+.calendar-day-gray {
+  @apply bg-slate-900/50;
+}
+
+.calendar-day-idea {
+  @apply mt-1 text-xs p-1.5 rounded-md truncate cursor-pointer border border-transparent shadow-sm transition-all duration-200 hover:scale-[1.02];
+}
+
+.calendar-day-idea-red {
+  @apply bg-red-950 text-white border-red-800/40;
+}
+
+.calendar-day-idea-blue {
+  @apply bg-blue-950 text-white border-blue-800/40;
+}
+
+.calendar-day-idea-green {
+  @apply bg-green-950 text-white border-green-800/40;
+}
+
+.calendar-day-idea-purple {
+  @apply bg-purple-950 text-white border-purple-800/40;
+}
+
+/* Better visibility for calendar entries */
+.calendar-entry {
+  @apply px-2 py-1 rounded-md bg-primary text-primary-foreground border border-primary/70 text-xs truncate hover:bg-primary/90 transition-colors font-semibold shadow-sm;
+}
+
+/* Calendar day with content */
+.withContent {
+  @apply bg-primary/10 text-primary font-medium rounded-full;
+}
+
+/* For video idea cards */
+.idea-card {
+  @apply transition-all duration-300 hover:bg-accent bg-card border border-border;
+}
+
+.idea-card-title {
+  @apply font-heading text-base font-medium text-foreground;
+}
+
+.idea-card-content {
+  @apply text-sm text-foreground;
+}
+
+/* Idea list styling */
+.idea-list-item {
+  @apply text-foreground border-l-2 border-primary pl-2 my-1;
+}
+
+/* Pricing table highlight */
+.pricing-highlight {
+  @apply border-2 border-primary transform scale-105 shadow-lg shadow-primary/20;
+}
+
+/* Pricing card hover effect */
+.pricing-card {
+  @apply transition-all duration-300 hover:border-primary/50 hover:shadow-md hover:shadow-primary/10;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-heading {
+  font-family: 'JetBrains Mono', monospace;
+}
